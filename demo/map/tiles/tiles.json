@@ -16,7 +16,7 @@
     "profile": "mercator",
     "version": "1",
     "generator": "MapTiler Desktop Pro 11.1-2ae5f855e2",
-    "attribution": " ",
+    "attribution": "<a href=\"https://maplibre.com\" target=\"_blank\" title=\"MapLibre\">MapLibre</a>",
     "description": "",
     "vector_layers": [
         {
