@@ -1,0 +1,26 @@
+{
+  "name": "maplibre-storymap",
+  "version": "1.0.0",
+  "description": "A simple node app to initialize a local maplibre storymap server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify build.js -o ./dist/bundle.js"
+  },
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "express": "^4.18.2",
+    "intersection-observer": "^0.12.2",
+    "maplibre-gl": "^2.4.0",
+    "scrollama": "^3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digidem/maplibre-storymap.git"
+  },
+  "author": "Rudo Kemper",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/digidem/maplibre-storymap/issues"
+  },
+  "homepage": "https://github.com/digidem/maplibre-storymap#readme"
+}

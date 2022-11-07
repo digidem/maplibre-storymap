@@ -3,12 +3,12 @@ Some stories are best told with a map. Data journalists covering changing condit
 
 This template is designed to accelerate building out a "scrollytelling" map story. The primary input is a story broken into sections (`chapters`), each hooked to a particular view of a map.
 
-This template is based on Mapbox's storytelling template but has been customized to work with MapLibre instead. The output is an HTML and JavaScript file. These outputs can be hosted on a web-accessible location, with no extra code or infrastructure required. The template can also be hosted in a location without network connectivity, using your own map tiles that work with MapLibre.
-
-Note that embedding the output as an iFrame in another page will not work as expected. The scroll-driven interface requires the full page.
+This template is based on Mapbox's storytelling template but has been customized to work with MapLibre instead. The template can be self-hosted with your own tiles, online or offline, either on a network server or localhost via Node.
 
 ## Prerequisites
-This template is for data journalists and digital storytellers of any kind. No coding experience is required. If you are planning to include some custom map layers, you will need some familiarity with the [MapLibre style specifications](https://maplibre.org/maplibre-gl-js-docs/style-spec/).
+This template is for data journalists and digital storytellers of any kind. No coding experience is required. 
+
+If you are planning to include some custom map layers, you will need some familiarity with the [MapLibre style specifications](https://maplibre.org/maplibre-gl-js-docs/style-spec/).
 
 The template does not rely on any particular CSS framework, fonts, or images. There are some basic styles in the `head` of the HTML file that can be changed, so feel free to adapt and add to these to match your site and story brand.
 
@@ -103,7 +103,7 @@ Note: items in bold are **required**.
 - `onChapterExit`: Same as `onChapterEnter` except it is triggered when the section becomes inactive. _Array of objects_
 
 
-#### Layer Configuration in your MapLibre style
+### Layer Configuration in your MapLibre style
 
 Add and style each custom layer in your MapLibre style. Next, set any layers's style to be hidden with `0` opacity. For example, if you have a `circle` layer, makes sure the `color-opacity` and/or the `stroke-opacity` is set to 0.
 
@@ -121,6 +121,13 @@ For hosting online, if you don't know where to start, look into GitHub Pages or 
 
 ### Offline hosting
 
+You can set up a local server (served at `http://localhost:5000`) using Node. 
+
+First, make sure you have Node and NPM installed.
+
+Next, in the directory, run `npm run build` to compile your scripts.
+
+To initialize the server, run `node index.js`.
 
 ## Built With
 

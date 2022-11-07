@@ -1,3 +1,10 @@
+node_modules/
+map/*
+!map/.keep
+dist/*
+!dist/.keep
+config.js
+
 # Logs
 .DS_Store
 logs
