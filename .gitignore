@@ -3,6 +3,7 @@ map/*
 !map/.keep
 dist/*
 !dist/.keep
+!dist/maplibre-gl.css
 config.js
 
 # Logs
