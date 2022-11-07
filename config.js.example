@@ -43,10 +43,10 @@ var config = {
                 //     opacity: 1,
                 //     duration: 5000
                 // }
-                {
-                    layer: 'countries-fill',
-                    opacity: 1
-                }
+                // {
+                //      layer: 'countries-fill',
+                //      opacity: 1
+                // }
             ],
             onChapterExit: [
                 // {
@@ -73,10 +73,10 @@ var config = {
             mapInteractive: false,
             callback: '',
             onChapterEnter: [
-                {
-                    layer: 'countries-fill',
-                    opacity: 0
-                }
+                // {
+                //     layer: 'countries-fill',
+                //     opacity: 0
+                // }
             ],
             onChapterExit: []
         }
