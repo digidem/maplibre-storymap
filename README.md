@@ -123,9 +123,9 @@ For hosting online, if you don't know where to start, look into GitHub Pages or 
 
 You can set up a local server (served at `http://localhost:5000`) using Node. 
 
-First, make sure you have Node and NPM installed.
+First, make sure you have Node and npm (Node Package Manager) installed.
 
-Next, in the directory, run `npm run build` to compile your scripts.
+Next, in the directory, run `npm install` to set up y our node packages, followed by `npm run build` to compile your scripts.
 
 To initialize the server, run `node index.js`.
 
