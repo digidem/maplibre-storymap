@@ -336,6 +336,15 @@
         // add navigation control for interactive chapters
         const navigation = new maplibregl.NavigationControl();
 
+        if (config.use3dTerrain) {
+            map.addControl(
+                new maplibregl.TerrainControl({
+                    source: 'terrainSource',
+                    exaggeration: 1
+                })
+            );
+        }
+
         // add custom hover popups for interactive chapters
         const popup = new maplibregl.Popup({
             closeButton: false,
@@ -558,6 +567,15 @@
         var scroller = scrollama();
 
         map.on("load", function () {
+            if (config.use3dTerrain) {
+                map.addSource('terrainSource', {
+                    'type': 'raster-dem',
+                    'url': 'map/terrain-tiles/tiles.json',
+                    tileSize: 256
+                });
+
+                map.setTerrain({ 'source': 'terrainSource', 'exaggeration': 1 });
+            };            
 
             // add custom layers
             if (config.useCustomLayers) {

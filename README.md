@@ -48,6 +48,8 @@ Note: items in bold are **required**.
 
 **`theme`**: Two basic themes (light and dark) are available.
 
+`use3dTerrain`: Enables 3D terrain. You will need to provide your own terrain tiles. See the [MapLibre GL JS 3D example](https://maplibre.org/maplibre-gl-js-docs/example/3d-terrain/) for reference. (Optional)
+
 `useCustomLayers`: Enables adding custom sources and layers as defined in `sources.js`. 
 
 `bookmarks`: Enables adding bookmark links in the header and footer for each chapter. Bookmarks will be added for any chapter that has a title.
