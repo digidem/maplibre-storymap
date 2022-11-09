@@ -8,7 +8,8 @@ app.use(express.static('.', {
         if (url.endsWith('.vector.pbf')) {
          res.setHeader('content-encoding', 'gzip');
         }
-}}));
+    }
+}));
 
 app.listen(port, () => {
     console.log(`Now listening on port ${port}`);

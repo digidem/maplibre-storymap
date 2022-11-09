@@ -3,14 +3,14 @@ Some stories are best told with a map. Data journalists covering changing condit
 
 This template is designed to accelerate building out a "scrollytelling" map story. The primary input is a story broken into sections (`chapters`), each hooked to a particular view of a map.
 
-This template is based on Mapbox's storytelling template but has been customized to work with MapLibre instead. The template can be self-hosted with your own tiles, online or offline, either on a network server or localhost via Node.
+This template is based on Mapbox's storytelling template but has been customized to work with MapLibre instead. The template can be self-hosted with your own tiles, online or offline, either as static HTML or using Node. To work with gzipped vector tiles, you will need to use Node.
 
 ## Prerequisites
 This template is for data journalists and digital storytellers of any kind. No coding experience is required. 
 
-If you are planning to include some custom map layers, you will need some familiarity with the [MapLibre style specifications](https://maplibre.org/maplibre-gl-js-docs/style-spec/).
+If you are planning to include some custom map layers, you will need some familiarity with the [MapLibre style specifications](https://maplibre.org/maplibre-gl-js-docs/style-spec/), or use [MapTiler](https://www.maptiler.com/) or [Maputnik](https://github.com/maputnik) to design your own style.
 
-The template does not rely on any particular CSS framework, fonts, or images. There are some basic styles in the `head` of the HTML file that can be changed, so feel free to adapt and add to these to match your site and story brand.
+The template does not rely on any particular CSS framework or fonts. There are some basic styles in the `head` of the HTML file that can be changed, so feel free to adapt and add to these to match your site and story brand. You can place your own image assets in the `images/` directory.
 
 ## Getting Started
 
@@ -20,7 +20,9 @@ Make a copy of `config.js.template` and name it `config.js`. Open the new `confi
 
 #### Steps
 
-1. **Prepare your map tiles and design a MapLibre style**. This template looks for map tiles and style stored in the `map/` directory. To test out the template, you could use the [MapLibre demo tiles](https://github.com/maplibre/demotiles). Download the repo and place it in this directory, and change the paths for `fonts` and `sources` to relative.
+1. **Prepare your map tiles and design a MapLibre style**. This template looks for a map `style.json` in the `map/` directory. You could also place all of your map assets (tiles, sprites, font glyphs) here. You could change this, however. 
+
+   * To test out the template, you could use the [MapLibre demo tiles](https://github.com/maplibre/demotiles). Download the repo and place it in this directory, and change the paths for `fonts`, `sprites` and `sources` to your hosting path.
 
 2. **Set the configuration options** as described in the next section. 
 
@@ -28,7 +30,7 @@ Make a copy of `config.js.template` and name it `config.js`. Open the new `confi
 
 4. **Fill out your sections as needed.**  Give each section a unique name in the section `id` property. This will become the HTML `div` `id`, so avoid spaces in the name. Set the `location` properties for each chapter. The `title`, `description` properties are optional. The `description` supports HTML tags. If you have an image that goes with that section of the story, add the path to the image in the `image` property.
 
-5.  Open `index.html` in a browser, and scroll. Voila!
+5. **Figure out how you are hosting the template.** If you are deploying it as static HTML, simply place the files somewhere, open the `index.html` file in a browser, and voila! If you are deploying it with Node, you will need to run some additional steps, as listed in **Deployment** below.
 
 #### Configuration Options
 
@@ -113,21 +115,27 @@ You may also opt to add more sources and layers using the `useCustomLayers` conf
 
 ## Deployment
 
-Host the files in this repository in the same directory.
+Host the files in this repository in the same directory. You can either deploy this tool as static HTML, or as a server using Node and Express.JS.
 
-### Online hosting
+For both options, you have to set absolute paths in your `style.json` for the sources, sprites, and font glyphs. 
+
+### As static HTML
+
+This template will work as static HTML when hosted on a web-accessible location. Simply place the `dist/`, `images/`, `map/` (if you are hosting your own map and tiles), `config.js`, `index.html`, and `sources.js` (if you are using it) in the same directory. Accessing that directory in a browser should load the story map.
 
 For hosting online, if you don't know where to start, look into GitHub Pages or Netlify.
 
-### Offline hosting
+### Using Node.JS
 
-You can set up a local server (served at `http://localhost:5000`) using Node. 
+You can deploy this template as a server using Node. 
 
 First, make sure you have Node and npm (Node Package Manager) installed.
 
-Next, in the directory, run `npm install` to set up y our node packages, followed by `npm run build` to compile your scripts.
+Next, in the directory, run `npm install` to set up your node packages. You can also run `npm run build` to bundle your scripts. (The repo comes with a pre-compiled `bundle.js` file, but this guarantees you bundle the latest versions of MapLibre etc.)
 
-To initialize the server, run `node index.js`.
+To initialize the server, run `node index.js`. The default port is 5000 which you are free to change in `index.js`.
+
+We are using Express.JS to initialize the server, and to handle gzipped vector tiles (with file extension `.vector.pbf`).
 
 ## Built With
 
