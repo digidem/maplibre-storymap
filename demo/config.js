@@ -13,7 +13,7 @@ var config = {
     subtitle: 'Demo of the template using self-hosted tiles',
     byline: '',
     mobileview: '<div id="rotate-mobile"><em>For optimal viewing of this storytelling map on mobile, rotate your device to a horizontal orientation.</em><br><br><img src="images/device.png">', // to add custom messaging in the header for mobile devices
-    footer: 'Source: source citations, etc.<br> Created using <a href="https://github.com/rudokemper/maplibre-storytelling" target="_blank">MapLibre Storytelling</a> template.',
+    footer: 'Source: source citations, etc.<br> Created using <a href="https://github.com/digidem/maplibre-storymap" target="_blank">MapLibre Storytelling</a> template.',
     chapters: [
         {
             id: 'slug-style-id',
