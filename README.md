@@ -1,9 +1,9 @@
-# Interactive Storytelling with Maplibre
+# Interactive Storytelling with MapLibre
 Some stories are best told with a map. Data journalists covering changing conditions in a population's demographics, the environment, an international conflict, or telling a simple travel story frequently provide geographic context in their graphics.
 
 This template is designed to accelerate building out a "scrollytelling" map story. The primary input is a story broken into sections (`chapters`), each hooked to a particular view of a map.
 
-This template is based on Mapbox's storytelling template but has been customized to work with Maplibre instead. The template can be self-hosted with your own tiles, online or offline, either as static HTML or using Node. To work with gzipped vector tiles, you will need to use Node.
+This template is based on Mapbox's storytelling template but has been customized to work with MapLibre instead. The template can be self-hosted with your own tiles, online or offline, either as static HTML or using Node. To work with gzipped vector tiles, you will need to use Node.
 
 ## Prerequisites
 This template is for data journalists and digital storytellers of any kind. No coding experience is required. 
@@ -56,18 +56,18 @@ First, make sure you have Node and npm (Node Package Manager) installed.
 
 Next, in the directory, run `npm install` to set up your node packages. You can also run `npm run build` to bundle your scripts. (The repo comes with a pre-compiled `bundle.js` file, but this guarantees you bundle the latest versions of MapLibre etc.)
 
-To initialize the server, run `node index.js`. The default port is 5000 which you are free to change in `index.js`.
+To initialize the server, run `npm run serve`. The default port is 5000; if you want to change the port, run `npm run serve -- <port_number>`, replacing `<port_number>` with your desired port number. For example, to use port 8080, you would run `npm run serve -- 8080`.
 
-We are using Express.js to initialize the server, and to handle gzipped vector tiles (with file extension `.vector.pbf`).
+We are using Express.js to initialize the server and to handle gzipped vector tiles (with file extension `.vector.pbf`).
 
 ## Built with
 
-- Maplibre GL JS
+- MapLibre GL JS
 - Scrollama.js
 
-## Storytelling with Maps using Maplibre Workshop
+## Storytelling with Maps using MapLibre Workshop
 
-[@fmvaldezg](https://github.com/fmvaldezg) from Temple University Libraries created a [Storytelling with Maps using Maplibre Workshop](https://github.com/fmvaldezg/storytelling_maplibre_workshop), which could be helpful for learning how to use this template.
+[@fmvaldezg](https://github.com/fmvaldezg) from Temple University Libraries created a [Storytelling with Maps using MapLibre Workshop](https://github.com/fmvaldezg/storytelling_maplibre_workshop), which could be helpful for learning how to use this template.
 
 ## Acknowledgment
 

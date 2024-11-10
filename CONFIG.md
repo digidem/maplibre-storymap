@@ -4,7 +4,7 @@ _See also [config.js.example](config.js.example)_
 
 Note: items in bold are **required**.
 
-**`style`**: This is the Maplibre style to use for the app. You can set this to any Maplibre style hosted online or locally, but by default it is set to look for a style in the `map/` directory.
+**`style`**: This is the MapLibre style to use for the app. You can set this to any MapLibre style hosted online or locally, but by default it is set to look for a style in the `map/` directory.
 
 **`showMarkers`**: This controls whether markers are shown at the centerpoint of each chapter. If `true`, the map will display a default blue, inverted-teardrop icon.
 
@@ -16,7 +16,7 @@ Note: items in bold are **required**.
 
 **`theme`**: Two basic themes (light and dark) are available.
 
-`use3dTerrain`: Enables 3D terrain. You will need to provide your own terrain tiles. See the [Maplibre GL JS 3D example](https://maplibre.org/maplibre-gl-js-docs/example/3d-terrain/) for reference. (Optional)
+`use3dTerrain`: Enables 3D terrain. You will need to provide your own terrain tiles. See the [MapLibre GL JS 3D example](https://maplibre.org/maplibre-gl-js-docs/example/3d-terrain/) for reference. (Optional)
 
 `useCustomLayers`: Enables adding custom sources and layers as defined in `sources.js`. 
 
@@ -74,9 +74,9 @@ Note: items in bold are **required**.
     - `duration`: The length of the opacity transition, numeric, in milliseconds. Default is 300. This is an optional parameter and can be omitted.
 - `onChapterExit`: Same as `onChapterEnter` except it is triggered when the section becomes inactive. _Array of objects_
 
-### Layer Configuration in your Maplibre style
+### Layer Configuration in your MapLibre style
 
-Add and style each custom layer in your Maplibre style. Next, set any layers's style to be hidden with `0` opacity. For example, if you have a `circle` layer, makes sure the `color-opacity` and/or the `stroke-opacity` is set to 0.
+Add and style each custom layer in your MapLibre style. Next, set any layers's style to be hidden with `0` opacity. For example, if you have a `circle` layer, makes sure the `color-opacity` and/or the `stroke-opacity` is set to 0.
 
 This will ensure that the map appears correctly when the story page loads. To adjust the opacity of the layers as the reader scrolls through the story, use the `onChapterEnter` or `onChapterExit` configuration options to set your desired opacity for the layer.
 

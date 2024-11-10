@@ -60,7 +60,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Second Title',
-            image: 'images/minkus.jpg',
+            image: 'images/mochi.jpg',
             description: 'Here, we just turn off <strong>countries-fill</strong> just to demonstrate the functionality. This would look a lot nicer with a custom map and layers etc. as used for a typical story map.',
             location: {
                 center: [-79, 0],
